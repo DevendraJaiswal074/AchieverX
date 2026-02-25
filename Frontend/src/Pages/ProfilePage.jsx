@@ -43,7 +43,7 @@ function ProfilePage() {
           {!editing ? (
             <button
               onClick={() => setEditing(true)}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors duration-200"
+              className="bg-[#3475d9] hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors duration-200"
             >
               <HiOutlinePencil className="text-lg" />
               Edit Profile
@@ -58,7 +58,7 @@ function ProfilePage() {
               </button>
               <button
                 onClick={handleSave}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+                className="bg-[#3475d9] hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
               >
                 Save Changes
               </button>
@@ -70,7 +70,7 @@ function ProfilePage() {
           {/* Profile Card */}
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 flex flex-col items-center">
             <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-              <HiOutlineUser className="text-4xl text-blue-600" />
+              <HiOutlineUser className="text-4xl text-[#3475d9]" />
             </div>
             <h2 className="text-xl font-bold text-gray-800">{formData.name}</h2>
             <p className="text-gray-500 text-sm mt-1">{formData.email}</p>

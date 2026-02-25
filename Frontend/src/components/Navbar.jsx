@@ -46,7 +46,7 @@ const Navbar = () => {
               About
             </NavLink>
             <NavLink to="/contact" className={navLinkClass}>
-              Contact us
+              Contact Us
             </NavLink>
           </div>
 
@@ -54,8 +54,11 @@ const Navbar = () => {
           <div className="hidden md:flex items-center gap-3">
             {user ? (
               <>
-                <span className="w-9 h-9 rounded-full bg-[#3475d9] text-white flex items-center justify-center text-sm font-bold uppercase">
-                  {user.name?.charAt(0)}
+                <span className="flex items-center gap-2">
+                  <span className="w-9 h-9 rounded-full bg-[#3475d9] text-white flex items-center justify-center text-sm font-bold uppercase">
+                    {user.name?.charAt(0)}
+                  </span>
+                  <span className="text-gray-700 font-medium text-base">Hello, {user.name?.split(' ')[0] || 'User'}</span>
                 </span>
                 <button
                   onClick={handleLogout}

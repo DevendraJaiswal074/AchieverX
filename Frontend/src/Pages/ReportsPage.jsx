@@ -69,7 +69,7 @@ function ReportsPage() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-lg">
-              <HiOutlineAcademicCap className="text-2xl text-blue-600" />
+              <HiOutlineAcademicCap className="text-2xl text-[#3475d9]" />
             </div>
             <div>
               <p className="text-2xl font-bold text-gray-800">78%</p>

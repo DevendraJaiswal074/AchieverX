@@ -36,8 +36,8 @@ function Sidebar() {
               to={item.path}
               className={`flex items-center gap-3 px-6 py-3 text-sm font-medium transition-colors duration-150 ${
                 isActive
-                  ? 'text-blue-600 bg-blue-50 border-r-3 border-blue-600'
-                  : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
+                  ? 'text-[#3475d9] bg-blue-50 border-r-3 border-[#3475d9]'
+                  : 'text-gray-600 hover:text-[#3475d9] hover:bg-gray-50'
               }`}
             >
               <item.icon className="text-lg" />
@@ -53,8 +53,8 @@ function Sidebar() {
           to="/profile"
           className={`flex items-center gap-3 px-6 py-3 text-sm font-medium transition-colors duration-150 ${
             location.pathname === '/profile'
-              ? 'text-blue-600 bg-blue-50 border-r-3 border-blue-600'
-              : 'text-gray-600 hover:text-blue-600 hover:bg-gray-50'
+              ? 'text-[#3475d9] bg-blue-50 border-r-3 border-[#3475d9]'
+              : 'text-gray-600 hover:text-[#3475d9] hover:bg-gray-50'
           }`}
         >
           <HiOutlineUser className="text-lg" />

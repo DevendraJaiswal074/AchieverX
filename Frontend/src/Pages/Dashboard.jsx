@@ -11,7 +11,17 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 import { FiEdit } from 'react-icons/fi';
+
+import {
+  HiOutlineClipboardList,
+  HiOutlineClock,
+  HiOutlineCheckCircle,
+  HiOutlinePlay,
+} from 'react-icons/hi';
+
 import Sidebar from '../components/Sidebar';
+
+import { useAuth } from '../context/AuthContext';
 
 // Sample chart data
 const progressData = [
@@ -36,6 +46,9 @@ const recentActivity = [
 ];
 
 function Dashboard() {
+
+  const { user } = useAuth();
+
   return (
     <div className="flex min-h-screen bg-gray-100">
       {/* Sidebar */}
@@ -47,7 +60,7 @@ function Dashboard() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-3xl font-bold text-gray-800">
-              Welcome back, Student!
+              Welcome back, {user.name?.split(' ')[0] || 'User'}!
             </h1>
             <p className="text-gray-500 mt-1">
               Welcome to GATE & UGC NET Practice!
@@ -55,8 +68,9 @@ function Dashboard() {
           </div>
           <Link
             to="/start-test"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
+            className="flex items-center justify-center gap-2 bg-[#3475d9] hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200"
           >
+            <HiOutlinePlay className="text-lg" />
             Start New Test
           </Link>
         </div>

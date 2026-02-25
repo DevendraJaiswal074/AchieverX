@@ -92,7 +92,7 @@ function MyTestsPage() {
           </div>
           <Link
             to="/start-test"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors duration-200"
+            className="bg-[#3475d9] hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg flex items-center gap-2 transition-colors duration-200"
           >
             <HiOutlinePlay className="text-lg" />
             Start New Test
@@ -103,7 +103,7 @@ function MyTestsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           <div className="bg-white rounded-xl shadow-sm border border-gray-200 p-5 flex items-center gap-4">
             <div className="bg-blue-100 p-3 rounded-lg">
-              <HiOutlineClipboardList className="text-2xl text-blue-600" />
+              <HiOutlineClipboardList className="text-2xl text-[#3475d9]" />
             </div>
             <div>
               <p className="text-2xl font-bold text-gray-800">5</p>
@@ -161,7 +161,7 @@ function MyTestsPage() {
                     <td className="px-6 py-4 text-gray-600">{test.score || '—'}</td>
                     <td className="px-6 py-4">
                       {test.status === 'completed' ? (
-                        <button className="text-blue-600 hover:text-blue-800 font-medium text-sm">
+                        <button className="text-[#3475d9] hover:text-blue-800 font-medium text-sm">
                           Review
                         </button>
                       ) : test.status === 'in-progress' ? (

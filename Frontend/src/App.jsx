@@ -8,6 +8,8 @@ import SignupPage from './Pages/SignupPage';
 import MyTestsPage from './Pages/MyTestsPage';
 import ReportsPage from './Pages/ReportsPage';
 import ProfilePage from './Pages/ProfilePage';
+import AboutPage from './Pages/AboutPage';
+import ContactPage from './Pages/ContactPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
 // Protected route wrapper
@@ -25,6 +27,8 @@ function AppRoutes() {
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
         <Route
           path="/dashboard"
           element={
