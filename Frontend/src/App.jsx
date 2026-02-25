@@ -15,6 +15,8 @@ import TestPage from './Pages/TestPage';
 import TestReportPage from './Pages/TestReportPage';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
+export const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 // Protected route wrapper
 const ProtectedRoute = ({ children }) => {
   const { user, loading } = useAuth();

@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { HiOutlineMail, HiOutlineLockClosed, HiOutlineUser, HiOutlineEye, HiOutlineEyeOff } from 'react-icons/hi';
 import { useAuth } from '../context/AuthContext';
 
+import { backendUrl } from '../App';
+
 function SignupPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -27,7 +29,7 @@ function SignupPage() {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:8080/api/auth/register', {
+      const res = await fetch(`${backendUrl}/api/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ name, email, password }),
