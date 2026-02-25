@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import heroImg from "../assets/hero-img.png";
+import { useAuth } from '../context/AuthContext';
 
 const HeroSection = () => {
+  const { user } = useAuth();
+
   return (
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-4 mt-10">
@@ -17,7 +20,7 @@ const HeroSection = () => {
             </p>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
-                to="/practice"
+                to={user ? '/dashboard' : '/login'}
                 className="px-8 py-3 text-base font-semibold text-white bg-[#3475d9] rounded-lg hover:bg-blue-700 transition-colors duration-200 shadow-lg shadow-blue-200"
               >
                 Start Practicing
